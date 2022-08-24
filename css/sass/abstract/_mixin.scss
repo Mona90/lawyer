@@ -1,0 +1,115 @@
+// Extend Code
+
+// extend for join us section
+%nav-list-style{
+    color: #FFF;
+    &:not(:last-of-type){
+        border-left:2px solid $secondColor;
+        margin-left: 15px;
+        padding-left: 15px;
+    }
+}
+
+%nav-a-style{
+    color:#FFF;
+    font-size: 18px;
+}
+%nav-svg{
+    color: $secondColor;
+    font-size:25px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+// low problem solution
+%suggest-number{
+    content: '1';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top:50%;
+    transform: translateY(-50%);
+    background-color: $secondColor;
+    color: $mainColor;
+    border-radius: 50%;
+    font-size: 14px;
+    text-align: center;
+    z-index: 5;
+}
+%divide-before-after{
+    position: absolute;
+    content: "";
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $mainColor;
+    left:-7px;
+    z-index: 3;
+}
+
+
+// @mixin overlay{/* @include: overlay;*/
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     top:0;
+//     left: 0;
+// }
+/*Prefixes style*/
+@mixin prefixer($property, $value, $prefixes: ()){
+    @each $prefix in $prefixes {
+        #{'-' +  $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+/* mixin */
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name}{
+        @content;
+   }
+   @-moz-keyframes #{$animation-name}{
+        @content;
+}
+   @keyframes #{$animation-name}{
+         @content;
+}
+}
+
+
+// Scaling for vedio icon
+@keyframes scalingIn{
+    0%{
+        opacity: 0.4;
+        transform: scale3d(.75,.75,1);
+    }
+    100%{
+        opacity: .4;
+        transform: scale3d(1.75,1.75,1);
+    }
+}
+@keyframes scalingOut{
+    0%{
+        opacity: .4;
+        transform: scale3d(.75,.75,1);
+    }
+    100%{
+        opacity: .4;
+        transform: scale3d(1.75,1.75,1);
+    }
+}
+
+// animation for view the menu dropdown for the header
+@keyframes moveDownUp{
+    0%{
+         transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
+

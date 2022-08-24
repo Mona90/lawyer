@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>user search page</title>
+        <link href="https://fonts.googleapis.com/css?family=Changa&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Mirza&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/vendor/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/vendor/bootstraprtl.min.css">
+        <link rel="stylesheet" href="css/vendor/all.min.css">
+        <link rel="stylesheet" href="css/vendor/animate.css">
+        <link rel="stylesheet" href="css/main-rtl.css">
+    </head>
+    <body id="body">
+        <div class="join-us">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <ul class="join-us-tabs nav align-items-center">
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">دخول</a></li>
+                            <li class="join-btn p-1 rounded dropdown">
+                                <a class="join-dropdown" href="#">Youssif Raafat</a>
+                                <div class="join-menu shadow">
+                                    <a href="#"><i class="fas fa-user-tie"></i>بياناتي</a>
+                                    <a href="#"><i class="fas fa-briefcase"></i>الإستشارات السابقة</a>
+                                    <a href="#"><i class="fas fa-sign-out-alt"></i>خروج</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 d-none d-md-block">
+                        <ul class="join-us-store nav align-items-center">
+                            <li>App Store <i class="fab fa-app-store"></i></li>
+                            <li>Play store <i class="fab fa-google-play"></i></li>
+                        </ul>
+                    </div>
+                </div>
+     
+            </div>
+        </div>
+        <!-- Start Header -->
+        <header class="fixed-header">
+            <div class="header">
+                <div class="container">
+                    <div class="header__hold py-2">
+                        <div class="header__hold__nav-close d-md-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>    
+                        <ul class="header__hold__nav align-items-center d-md-block mb-0">
+                            <li class="header__hold__nav__search" >
+                                <i class="fas fa-search header__hold__nav__search__icon" onclick="openSearch()"></i>
+                            </li>
+                            <li><a href="#">استشارتك</a></li>
+                            <li><a href="#">الأقسام</a></li>
+                            <li><a href="#">من نحن</a></li>
+                        </ul>
+                        <div class="header__hold__logo">
+                            <a class="header__hold__logo__img" href="#">Lawyer<i class="fas fa-balance-scale-left pl-2"></i></a>
+                        </div>
+    
+                    </div>
+                    <!-- search overlay code -->
+                    <div class="header__search-overlay" id='mySearchOverlay'>
+                        <div class="header__search__overlay__close" onclick="closeSearch()"></div>
+                        <div class="header__search__overlay__content">
+                            <form>
+                                <input type="text" class="header__search__overlay__content__input" placeholder="ابحث هنا . . . ." >
+                                <button class="header__overlay__content__input-search"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End search overlay code -->
+    
+                </div>
+            </div>
+        </header>
+        <!-- Hero Image  -->
+        <div class="user-search">
+            <div class="hero-img">
+                <div class="container">
+                    <div class="user-search__control d-flex">
+                        <div class="user-search__control__select select-input">
+                            <select>
+                                <option value="" selected>بحث عن طريق</option>
+                                <option value="1">أ- الإسم</option>
+                                <option value="2">ب- التخصص</option>
+                                <option value="3">ج- الدرجة العلمية</option>
+                            </select>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="user-search__control__input">
+                            <input type="text" placeholder="........"/>
+                            <span><i class="fas fa-search"></i></span>
+                            
+                        </div>
+    
+                    </div>
+                </div>
+           </div>
+           <div class="our-lawyers">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <div class="user-search__check">
+                            <h3><i class="fas fa-gavel mr-3"></i>حدد التخصص</h3>
+                            <div class="user-search__check__side">
+                                <div class="show-side-control">
+                                    <i class="fas fa-cog"></i>
+                               </div>
+                                <div class="user-search__check__side__hold">
+
+                                    <div class="user-search__check__side__hold__head">
+                                        <h5><i class="fas fa-graduation-cap"></i> اللقب</h5>
+                                        <i class="fas fa-chevron-down user-search__check__side__hold__head__icon-down"></i> 
+                                    </div>
+                                    
+                                    <div class="user-search__check__side__hold__box">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="prof">
+                                            <label class="form-check-label" for="prof">
+                                            أستاذ
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="consultant" checked>
+                                            <label class="form-check-label" for="consultant">
+                                            مستشار
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="veto">
+                                            <label class="form-check-label" for="veto">
+                                            بالنقض
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="rule">
+                                            <label class="form-check-label" for="rule">
+                                            الدستورية العليا
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="user-search__check__side__hold">
+
+                                    <div class="user-search__check__side__hold__head">
+                                        <h5><i class="fas fa-american-sign-language-interpreting"></i>التخصص</h5>
+                                        <i class="fas fa-chevron-down user-search__check__side__hold__head__icon-down"></i> 
+                                    </div>
+                                    <div class="user-search__check__side__hold__box">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="box2check1">
+                                            <label class="form-check-label" for="box2check1">
+                                            جنح
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="box2check2">
+                                            <label class="form-check-label" for="box2check2">
+                                            جنائية
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="box2check3">
+                                            <label class="form-check-label" for="box2check3">
+                                            مالية
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="box2check4" checked>
+                                            <label class="form-check-label" for="box2check4">
+                                            مدنية
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="box2check5">
+                                            <label class="form-check-label" for="box2check5">
+                                            مواريث
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="box2check6">
+                                            <label class="form-check-label" for="box2check6">
+                                            شركات
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="box2check7">
+                                            <label class="form-check-label" for="box2check7">
+                                            ضرائب
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="user-search__check__side__hold">
+                                    <div class="user-search__check__side__hold__head">
+                                        <h5><i class="fas fa-venus-mars"></i>النوع</h5>
+                                        <i class="fas fa-chevron-down user-search__check__side__hold__head__icon-down"></i> 
+                                    </div>
+                                    <div class="user-search__check__side__hold__box">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="box3check1">
+                                            <label class="form-check-label" for="box3check1">
+                                            محامية
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="box3check2" checked>
+                                            <label class="form-check-label" for="box3check2">
+                                            محامي
+                                            </label>
+                                        </div>    
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+                            <nav aria-label="our-lawyers__breadcrumb breadcrumb col-md-6">
+                                <ol class="breadcrumb bg-white mb-0">
+                                  <li class="breadcrumb-item"><a class="our-lawyers__breadcrumb__link" href="#">مستشار</a></li>
+                                  <li class="breadcrumb-item"><a class="our-lawyers__breadcrumb__link" href="#">مدنية</a></li>
+                                  <li class="breadcrumb-item active" aria-current="page">محامي</li>
+                                </ol>
+                            </nav>
+                            <div class="form-group row select-input col-md-6 p-0 align-items-center m-0 justify-content-md-end">
+                                <label class="col-3">ترتيب</label>
+                                <select class="form-control col-9 col-md-8">
+                                    <option value="" selected>أعلي التقييمات</option>
+                                    <option value="1">الاختيارالاول</option>
+                                    <option value="2">الاختيارالثاني</option>
+                                    <option value="3">الاختيار الثالث</option>
+                                    <option value="4">الاختيار الرابع</option>
+                                </select>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="row our-lawyers__card">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card mt-4">
+                                    <img src="images/our-lawyers1.jpg" class="card-img-top" alt="...">
+                                    <div class="our-lawyers__card__body card-body">
+                                        <h5 class="our-lawyers__card__body__title card-title">المستشار/ احمد ابراهيم جلال</h5>
+                                        <p class="our-lawyers__card__body__text card-text">محامي بالنقض والدستورية العليا وقضايا الدولة</p>
+                                        <div class="our-lawyers__card__body__grade">
+                                            <i class="far fa-star our-lawyers__card__body__grade__empty"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>    
+                                        </div>
+                                        <div class="d-flex our-lawyers__card__body__reserve-details justify-content-between">
+                                            <p><i class="fas fa-money-bill-wave price mr-2"></i>سعر الاستشارة</p>
+                                            <p><i class="fas fa-history time mr-2"></i>مدة الانتظار</p>
+                                        </div>
+                                        <div class="our-lawyers__card__body__social d-flex justify-content-center">
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-facebook-f"></i>
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                    </div>
+                                    <div class="our-lawyers__card__overlay">
+                                        <div class="d-flex justify-content-center">
+                                            <a class="our-lawyers__card__overlay__info" href="#">مزيدمن المعلومات</a>
+                                            <a class="our-lawyers__card__overlay__reverse" href="#">إستشارة</a>    
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card mt-4">
+                                    <img src="images/our-lawyers4.jpg" class="card-img-top" alt="...">
+                                    <div class="our-lawyers__card__body card-body">
+                                        <h5 class="our-lawyers__card__body__title card-title">المستشارة/ مريم محمود عبدالعال</h5>
+                                        <p class="our-lawyers__card__body__text card-text">محامي بالنقض والدستورية العليا وقضايا الدولة</p>
+                                        <div class="our-lawyers__card__body__grade">
+                                            <i class="far fa-star our-lawyers__card__body__grade__empty"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>    
+                                        </div>
+                                        <div class="d-flex our-lawyers__card__body__reserve-details justify-content-between">
+                                            <p><i class="fas fa-money-bill-wave price mr-2"></i>سعر الاستشارة</p>
+                                            <p><i class="fas fa-history time mr-2"></i>مدة الانتظار</p>
+                                        </div>
+                                        <div class="our-lawyers__card__body__social d-flex justify-content-center">
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-facebook-f"></i>
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+        
+                                    </div>
+                                    <div class="our-lawyers__card__overlay">
+                                        <div class="d-flex justify-content-center">
+                                            <a class="our-lawyers__card__overlay__info" href="#">مزيدمن المعلومات</a>
+                                            <a class="our-lawyers__card__overlay__reverse" href="#">إستشارة</a>    
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card mt-4">
+                                    <img src="images/our-lawyers3.jpg" class="card-img-top" alt="...">
+                                    <div class="our-lawyers__card__body card-body">
+                                        <h5 class="our-lawyers__card__body__title card-title">المستشار/ احمد ابراهيم جلال</h5>
+                                        <p class="our-lawyers__card__body__text card-text">محامي بالنقض والدستورية العليا وقضايا الدولة</p>
+                                        <div class="our-lawyers__card__body__grade">
+                                            <i class="far fa-star our-lawyers__card__body__grade__empty"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>    
+                                        </div>
+                                        <div class="d-flex our-lawyers__card__body__reserve-details justify-content-between">
+                                            <p><i class="fas fa-money-bill-wave price mr-2"></i>سعر الاستشارة</p>
+                                            <p><i class="fas fa-history time mr-2"></i>مدة الانتظار</p>
+                                        </div>
+                                        <div class="our-lawyers__card__body__social d-flex justify-content-center">
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-facebook-f"></i>
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                    </div>
+                                    <div class="our-lawyers__card__overlay">
+                                        <div class="d-flex justify-content-center">
+                                            <a class="our-lawyers__card__overlay__info" href="#">مزيدمن المعلومات</a>
+                                            <a class="our-lawyers__card__overlay__reverse" href="#">إستشارة</a>    
+                                        </div>
+                                    </div>
+    
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card mt-4">
+                                    <img src="images/our-lawyers1.jpg" class="card-img-top" alt="...">
+                                    <div class="our-lawyers__card__body card-body">
+                                        <h5 class="our-lawyers__card__body__title card-title">المستشار/ احمد ابراهيم جلال</h5>
+                                        <p class="our-lawyers__card__body__text card-text">محامي بالنقض والدستورية العليا وقضايا الدولة</p>
+                                        <div class="our-lawyers__card__body__grade">
+                                            <i class="far fa-star our-lawyers__card__body__grade__empty"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>    
+                                        </div>
+                                        <div class="d-flex our-lawyers__card__body__reserve-details justify-content-between">
+                                            <p><i class="fas fa-money-bill-wave price mr-2"></i>سعر الاستشارة</p>
+                                            <p><i class="fas fa-history time mr-2"></i>مدة الانتظار</p>
+                                        </div>
+                                        <div class="our-lawyers__card__body__social d-flex justify-content-center">
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-facebook-f"></i>
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                    </div>
+                                    <div class="our-lawyers__card__overlay">
+                                        <div class="d-flex justify-content-center">
+                                            <a class="our-lawyers__card__overlay__info" href="#">مزيدمن المعلومات</a>
+                                            <a class="our-lawyers__card__overlay__reverse" href="#">إستشارة</a>    
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card mt-4">
+                                    <img src="images/our-lawyers4.jpg" class="card-img-top" alt="...">
+                                    <div class="our-lawyers__card__body card-body">
+                                        <h5 class="our-lawyers__card__body__title card-title">المستشارة/ مريم محمود عبدالعال</h5>
+                                        <p class="our-lawyers__card__body__text card-text">محامي بالنقض والدستورية العليا وقضايا الدولة</p>
+                                        <div class="our-lawyers__card__body__grade">
+                                            <i class="far fa-star our-lawyers__card__body__grade__empty"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>    
+                                        </div>
+                                        <div class="d-flex our-lawyers__card__body__reserve-details justify-content-between">
+                                            <p><i class="fas fa-money-bill-wave price mr-2"></i>سعر الاستشارة</p>
+                                            <p><i class="fas fa-history time mr-2"></i>مدة الانتظار</p>
+                                        </div>
+                                        <div class="our-lawyers__card__body__social d-flex justify-content-center">
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-facebook-f"></i>
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+        
+                                    </div>
+                                    <div class="our-lawyers__card__overlay">
+                                        <div class="d-flex justify-content-center">
+                                            <a class="our-lawyers__card__overlay__info" href="#">مزيدمن المعلومات</a>
+                                            <a class="our-lawyers__card__overlay__reverse" href="#">إستشارة</a>    
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card mt-4">
+                                    <img src="images/our-lawyers3.jpg" class="card-img-top" alt="...">
+                                    <div class="our-lawyers__card__body card-body">
+                                        <h5 class="our-lawyers__card__body__title card-title">المستشار/ احمد ابراهيم جلال</h5>
+                                        <p class="our-lawyers__card__body__text card-text">محامي بالنقض والدستورية العليا وقضايا الدولة</p>
+                                        <div class="our-lawyers__card__body__grade">
+                                            <i class="far fa-star our-lawyers__card__body__grade__empty"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>    
+                                        </div>
+                                        <div class="d-flex our-lawyers__card__body__reserve-details justify-content-between">
+                                            <p><i class="fas fa-money-bill-wave price mr-2"></i>سعر الاستشارة</p>
+                                            <p><i class="fas fa-history time mr-2"></i>مدة الانتظار</p>
+                                        </div>
+                                        <div class="our-lawyers__card__body__social d-flex justify-content-center">
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-facebook-f"></i>
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                    </div>
+                                    <div class="our-lawyers__card__overlay">
+                                        <div class="d-flex justify-content-center">
+                                            <a class="our-lawyers__card__overlay__info" href="#">مزيدمن المعلومات</a>
+                                            <a class="our-lawyers__card__overlay__reverse" href="#">إستشارة</a>    
+                                        </div>
+                                    </div>
+    
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card mt-4">
+                                    <img src="images/our-lawyers1.jpg" class="card-img-top" alt="...">
+                                    <div class="our-lawyers__card__body card-body">
+                                        <h5 class="our-lawyers__card__body__title card-title">المستشار/ احمد ابراهيم جلال</h5>
+                                        <p class="our-lawyers__card__body__text card-text">محامي بالنقض والدستورية العليا وقضايا الدولة</p>
+                                        <div class="our-lawyers__card__body__grade">
+                                            <i class="far fa-star our-lawyers__card__body__grade__empty"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>    
+                                        </div>
+                                        <div class="d-flex our-lawyers__card__body__reserve-details justify-content-between">
+                                            <p><i class="fas fa-money-bill-wave price mr-2"></i>سعر الاستشارة</p>
+                                            <p><i class="fas fa-history time mr-2"></i>مدة الانتظار</p>
+                                        </div>
+                                        <div class="our-lawyers__card__body__social d-flex justify-content-center">
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-facebook-f"></i>
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                    </div>
+                                    <div class="our-lawyers__card__overlay">
+                                        <div class="d-flex justify-content-center">
+                                            <a class="our-lawyers__card__overlay__info" href="#">مزيدمن المعلومات</a>
+                                            <a class="our-lawyers__card__overlay__reverse" href="#">إستشارة</a>    
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card mt-4">
+                                    <img src="images/our-lawyers4.jpg" class="card-img-top" alt="...">
+                                    <div class="our-lawyers__card__body card-body">
+                                        <h5 class="our-lawyers__card__body__title card-title">المستشارة/ مريم محمود عبدالعال</h5>
+                                        <p class="our-lawyers__card__body__text card-text">محامي بالنقض والدستورية العليا وقضايا الدولة</p>
+                                        <div class="our-lawyers__card__body__grade">
+                                            <i class="far fa-star our-lawyers__card__body__grade__empty"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>    
+                                        </div>
+                                        <div class="d-flex our-lawyers__card__body__reserve-details justify-content-between">
+                                            <p><i class="fas fa-money-bill-wave price mr-2"></i>سعر الاستشارة</p>
+                                            <p><i class="fas fa-history time mr-2"></i>مدة الانتظار</p>
+                                        </div>
+                                        <div class="our-lawyers__card__body__social d-flex justify-content-center">
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-facebook-f"></i>
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+        
+                                    </div>
+                                    <div class="our-lawyers__card__overlay">
+                                        <div class="d-flex justify-content-center">
+                                            <a class="our-lawyers__card__overlay__info" href="#">مزيدمن المعلومات</a>
+                                            <a class="our-lawyers__card__overlay__reverse" href="#">إستشارة</a>    
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card mt-4">
+                                    <img src="images/our-lawyers3.jpg" class="card-img-top" alt="...">
+                                    <div class="our-lawyers__card__body card-body">
+                                        <h5 class="our-lawyers__card__body__title card-title">المستشار/ احمد ابراهيم جلال</h5>
+                                        <p class="our-lawyers__card__body__text card-text">محامي بالنقض والدستورية العليا وقضايا الدولة</p>
+                                        <div class="our-lawyers__card__body__grade">
+                                            <i class="far fa-star our-lawyers__card__body__grade__empty"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>
+                                            <i class="fas fa-star our-lawyers__card__body__grade__full"></i>    
+                                        </div>
+                                        <div class="d-flex our-lawyers__card__body__reserve-details justify-content-between">
+                                            <p><i class="fas fa-money-bill-wave price mr-2"></i>سعر الاستشارة</p>
+                                            <p><i class="fas fa-history time mr-2"></i>مدة الانتظار</p>
+                                        </div>
+                                        <div class="our-lawyers__card__body__social d-flex justify-content-center">
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-facebook-f"></i>
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                    </div>
+                                    <div class="our-lawyers__card__overlay">
+                                        <div class="d-flex justify-content-center">
+                                            <a class="our-lawyers__card__overlay__info" href="#">مزيدمن المعلومات</a>
+                                            <a class="our-lawyers__card__overlay__reverse" href="#">إستشارة</a>    
+                                        </div>
+                                    </div>
+    
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+           </div>
+        </div>
+      
+        <!-- Start Secion Contact Us -->
+        <section class="about-us bg-light">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-4 col-md-2 col-lg-2">
+                        <h5 class="about-us__header">Lawyer<span>.com</span></h5>
+                        <ul class="about-us__info list-unstyled">
+                            <li>من نحن</li>
+                            <li>كيفية الاستشارة </li>
+                            <li>فريق عمل</li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-md-3 col-lg-2">
+                        <h5 class="about-us__header">ابحث عن طريق</h5>
+                        <ul class="about-us__info list-unstyled">
+                            <li>التخصص</li>
+                            <li>اللقب</li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-md-3 col-lg-2">
+                        <h5 class="about-us__header">هل انت محامي ؟</h5>
+                        <ul class="about-us__info list-unstyled">
+                            <li>انضم إلى فريفنا</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 mt-4 mt-md-0">
+                        <div class="row justify-content-between">
+                            <div class="col-8">
+                                <h5>تحتاج إلى مساعدة ؟</h5>
+                                <ul class="about-us__help list-unstyled">
+                                    <li>شروط الاستخدام</li>
+                                    <li>الخصوصية للأعضاء</li>
+                                    <li>الخصوصية للمحامين</li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <div class="about-us__app">
+                                    <img src="images/googleplay.png" class="img-fluid"/>
+                                    <img src="images/appstore.png" class="img-fluid"/>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row text-center align-items-center py-2">
+                    <div class="col-md-6">
+                        <p class="text-md-left mb-0">جميع الحقوق محفوظة &copy; فريق لوير</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer__socialmedia">
+                            <ul class="d-flex list-unstyled text-md-right mb-0">
+                                <li class="ml-4"><i class="fab fa-google-plus-g"></i></li>
+                                <li class="ml-4"><i class="fab fa-twitter"></i></li>
+                                <li class="ml-4"><i class="fab fa-facebook-f"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- js file-->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/all.min.js"></script>
+        <script src="js/modules/user-search-page/user-search.js"></script>
+            <!--Wow File-->
+        <script src="js/wow.min.js"></script>
+        <script>
+                new WOW().init();
+        </script>
+
+    </body>
+</html>
